@@ -3,7 +3,8 @@ package domain;
 import java.util.Date;
 
 public class Post {
-    private int id;
+    private String postType;
+    private int postId;
     private int ownerId;
     private Date date;
     private String text;
@@ -12,14 +13,13 @@ public class Post {
     private CommentsInfo comments;
     private boolean canEdit;
     private boolean canDelete;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private boolean canPin;
+    private boolean canReplyOwnerId;
+    private boolean canReplyPostId;
+    private boolean isPinned;
+    private boolean isFavorite;
+    private boolean markedAsAds;
+    private boolean friendsOnly;
 
     public int getOwnerId() {
         return ownerId;
@@ -83,5 +83,77 @@ public class Post {
 
     public void setCanDelete(boolean canDelete) {
         this.canDelete = canDelete;
+    }
+
+    public String getPostType() {
+        return postType;
+    }
+
+    public void setPostType(String postType) {
+        this.postType = postType;
+    }
+
+    public int getPostId() {
+        return postId;
+    }
+
+    public void setPostId(int postId) {
+        this.postId = postId;
+    }
+
+    public boolean isCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(boolean canPin) {
+        this.canPin = canPin;
+    }
+
+    public boolean isCanReplyOwnerId() {
+        return canReplyOwnerId;
+    }
+
+    public void setCanReplyOwnerId(boolean canReplyOwnerId) {
+        this.canReplyOwnerId = canReplyOwnerId;
+    }
+
+    public boolean isCanReplyPostId() {
+        return canReplyPostId;
+    }
+
+    public void setCanReplyPostId(boolean canReplyPostId) {
+        this.canReplyPostId = canReplyPostId;
+    }
+
+    public boolean isPinned() {
+        return isPinned;
+    }
+
+    public void setPinned(boolean pinned) {
+        isPinned = pinned;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public boolean isMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(boolean markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+    public boolean isFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public void setFriendsOnly(boolean friendsOnly) {
+        this.friendsOnly = friendsOnly;
     }
 }
