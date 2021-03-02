@@ -6,6 +6,10 @@ public class Post {
     private String postType;
     private int postId;
     private int ownerId;
+    private int count;
+    private int offset;
+    private String domain;
+    private String query;
     private Date date;
     private String text;
     private LikesInfo likes;
@@ -20,6 +24,7 @@ public class Post {
     private boolean isFavorite;
     private boolean markedAsAds;
     private boolean friendsOnly;
+    private boolean ownersOnly;
 
     public int getOwnerId() {
         return ownerId;
@@ -156,4 +161,25 @@ public class Post {
     public void setFriendsOnly(boolean friendsOnly) {
         this.friendsOnly = friendsOnly;
     }
+
+    public int getCount() { return count;}
+
+    public void setCount(int count) { this.count = count; }
+
+    public int getOffset() { return offset; }
+
+    public void setOffset(int offset) { this.offset = offset; }
+
+    public String getDomain() { return domain; }
+
+    public void setDomain(String domain) { this.domain = domain; }
+
+    public String getQuery() { return query; }
+
+    public void setQuery(String query) { this.query = query; }
+
+    public boolean isOwnersOnly() { return ownersOnly; }
+
+    public void setOwnersOnly(boolean ownersOnly) { this.ownersOnly = ownersOnly; }
+
 }
